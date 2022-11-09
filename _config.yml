@@ -1,0 +1,18 @@
+title: Michael Humiston
+description:  Michael Humiston's home on the web
+content: Software engineer. I build things. Usually they work.
+
+social:
+  - platform: GitHub
+    url: https://github.com/mhum
+  - platform: LinkedIn
+    url: https://www.linkedin.com/in/michaelhumiston/
+
+url: https://michaelhumiston.com
+baseurl: ""
+markdown: kramdown
+sharing_image: share.jpg
+google_analytics: ""
+
+half_side: right
+full_text_position: center
