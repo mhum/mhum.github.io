@@ -8,7 +8,9 @@
   <main>
     <div class="card__content--{{ site.full_text_position }} card__content">
       {{ content }}
-      {% include social.html %}
+      {% if page.title != "404" %}
+        {% include social.html %}
+      {% endif %}
     </div>
   </main>
 
