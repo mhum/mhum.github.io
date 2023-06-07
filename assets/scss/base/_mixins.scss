@@ -3,7 +3,7 @@
 /// @example
 ///     padding: rem(20);
 @function rem($pixels, $context: $browser-context) {
-  @return #{$pixels/$context}rem;
+  @return #{calc($pixels/$context)}rem;
 }
 
 @function color($color) {
