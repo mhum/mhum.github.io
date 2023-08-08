@@ -3,17 +3,23 @@
 
 {% include head.html %}
 
-<body class="card">
+  <body class="card">
 
-  <main>
-    <div class="card__content--{{ site.full_text_position }} card__content">
-      {{ content }}
-      {% if page.title != "404" %}
-        {% include social.html %}
-      {% endif %}
-    </div>
-  </main>
+    <main>
+      <div class="card__content--{{ site.full_text_position }} card__content">
+        {% if page.title != "404" %}
+          <div class="self">
+            <img src="assets/img/image.jpg" />
+          </div>
+        {% endif %}
 
-</body>
-
+        <div>
+          {{ content }}
+          {% if page.title != "404" %}
+            {% include social.html %}
+          {% endif %}
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
