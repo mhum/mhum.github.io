@@ -3,7 +3,7 @@ var browserSync = require('browser-sync');
 var sass        = require('gulp-sass')(require('sass'));
 var prefix      = require('gulp-autoprefixer');
 var cp          = require('child_process');
-var cssnano 		= require('gulp-cssnano');
+var cssnano     = require('gulp-cssnano');
 
 var jekyll   = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 var messages = {
@@ -45,21 +45,23 @@ gulp.task('sass', function () {
 /**
  * Wait for jekyll-build, then launch the Server
  */
-gulp.task('browser-sync', gulp.series('sass', 'jekyll-build', function() {
+gulp.task('browser-sync', gulp.series('sass', 'jekyll-build', function(cb) {
     browserSync({
         server: {
             baseDir: '_site'
         }
     });
+    cb();
 }));
 
 /**
  * Watch scss files for changes & recompile
  * Watch html/md files, run jekyll & reload BrowserSync
  */
-gulp.task('watch', function () {
-    gulp.watch(['assets/scss/*.scss', 'assets/scss/*/*.scss'], ['sass']);
-    gulp.watch(['*.html', '_layouts/*.html', '_posts/*'], ['jekyll-rebuild']);
+gulp.task('watch', function (cb) {
+    gulp.watch(['assets/scss/*.scss', 'assets/scss/*/*.scss'], gulp.series('sass'));
+    gulp.watch(['*.html', '_layouts/*.html', '_posts/*'], gulp.series('jekyll-rebuild'));
+    cb();
 });
 
 /**
