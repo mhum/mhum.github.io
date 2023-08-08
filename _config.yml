@@ -5,8 +5,10 @@ content: Software engineer. I build things. Usually they work.
 social:
   - platform: GitHub
     url: https://github.com/mhum
+    icon: github.svg
   - platform: LinkedIn
-    url: https://www.linkedin.com/in/michaelhumiston/
+    url: https://www.linkedin.com/in/michaelhumiston
+    icon: linkedin.svg
 
 url: https://michaelhumiston.com
 baseurl: ""

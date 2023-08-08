@@ -27,6 +27,16 @@
   .socialLinks__link {
     @include button--outline();
     font-family: $sans-serif;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5em 1em;
+
+    .socialLinks_icon {
+      align-items: center;
+      display: inline-flex;
+      margin-right: 0.25rem;
+    }
   }
 
   main {
