@@ -21,7 +21,7 @@ BUTTON DEFAULTS
 
   // hovering on the btn
   &:hover,
-  &:focus {
+  &:focus-visible {
     color: $btn-font-color;
     text-decoration: none;
     background-color: $btn-color;
