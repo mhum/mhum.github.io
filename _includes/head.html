@@ -10,7 +10,7 @@
     <meta content="{{ site.title }}" property="og:title">
     <meta content="website" property="og:type">
     <meta content="{{ site.description }}" property="og:description">
-    <meta content="{{ site.url }}" property="og:url">
+    <meta content="{{ site.url }}/" property="og:url">
     <meta content="{{ site.url }}/assets/img/{{ site.sharing_image }}" property="og:image">
 
     <!-- Twitter Cards -->
@@ -18,7 +18,7 @@
     <meta name="twitter:site" content="@{{ site.social.twitter }}">
     <meta name="twitter:creator" content="@{{ site.social.twitter }}">
     <meta name="twitter:title" content="{{ site.title }}">
-    <meta name="twitter:url" content="{{ site.url }}">
+    <meta name="twitter:url" content="{{ site.url }}/">
     <meta name="twitter:description" content="{{ site.description }}">
     <meta name="twitter:image:src" content="{{ site.url }}/assets/img/{{ site.sharing_image }}">
 
@@ -28,7 +28,7 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="{{ "/assets/css/style.css" | prepend: site.baseurl }}">
 
-    <link rel="canonical" href="{% if page.url =='/' %}{{site.url}}{% else %}{{page.url | absolute_url}}{% endif %}">
+    <link rel="canonical" href="{% if page.url =='/' %}{{site.url}}/{% else %}{{page.url | absolute_url}}{% endif %}">
     <meta name="msvalidate.01" content="702E2D995964FFFD34246C53A6E315DC" />
 
     <script type="application/ld+json">
@@ -36,7 +36,7 @@
             "@context" : "https://schema.org",
             "@type" : "WebSite",
             "name" : "{{ site.title }}",
-            "url" : "{{ site.url }}"
+            "url" : "{{ site.url }}/"
         }
     </script>
 
